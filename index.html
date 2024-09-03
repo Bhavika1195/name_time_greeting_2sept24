@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title> Name Greeting App</title>
+		<style>
+			*{font-size:60px;font-family:Calibri;		}
+			
+			body{background-color:lightblue;}
+		</style>
+	</head>
+	<body>
+		<center>
+			<br/>
+			<h1>Name App</h1>
+			<form onsubmit="show()">
+				<input type="text" id="name" placeholder="Enter Your Name"/>
+				<br/> <br/>
+				<input type="submit"/>
+			
+			</form>
+			<h2 id="msg"/>
+		
+		<script>
+			function show()
+			{
+				event.preventDefault();
+				let name=document.getElementById("name");
+				let msg=document.getElementById("msg");
+			let n=name.value;
+			let d=new Date();
+			let hr=d.getHours();
+
+			if(hr<12)
+				msg.innerHTML="Good Morning"+n;
+
+			if(hr<16)
+				msg.innerHTML="Good Afternoon" +n;
+
+			else
+				msg.innerHTML="Good Evening"+n;
+
+			}
+		</script>
+		</center>
+	</body>
+</html>
